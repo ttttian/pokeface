@@ -111,7 +111,7 @@ function match() {
     result_context.drawImage(result_image, 0, 0);
     image_data = context.getImageData(0, 0, result_canvas.width, result_canvas.height).data;
   }
-  result_image.src = "../img/all/" + id_pokey_dict[0][1] + ".png";
+  result_image.src = "../images/all/" + id_pokey_dict[0][1] + ".png";
 }
 
 function run() {

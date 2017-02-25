@@ -28,11 +28,12 @@ h1 {
 }
 
 #login-button {
-  background-image: url('../img/login-button.png');
+  background-image: url('../images/login-button.png');
   background-position: 0px 0px;
   display: inline-block;
   width: 202px;
   height: 46px;
+  visibility: hidden;
 }
 
 #login-button:hover {

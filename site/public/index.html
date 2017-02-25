@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>PokéFace</title>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '285589698272181',
+          status     : true,
+          version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">PokéFace</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="input-group">
+              <input type="text" value="(Paste Facebook image URL here) OR (Log in with Facebook to load your profile photo)" class="form-control input-large" id="photo-url">
+              <span class="input-group-btn">
+                  <button class="btn btn-default btn-large" type="button" onclick="run();">Go!</button>
+              </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 center" id="login">
+          <span id="login-button"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="center">
+          <canvas id="colorhistcanvas" width="500px" height="500px"></canvas>
+        </div>
+        <div class="center">
+            <canvas id="result" width="96px" height="96px"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/math.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/match.js"></script>
+  </body>
+</html>
