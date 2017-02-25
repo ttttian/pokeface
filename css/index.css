@@ -1,0 +1,41 @@
+body {
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+.input-large {
+  font-size: 15px;
+  padding: 23px;
+}
+
+#photo-url {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.btn-large {
+  padding: 13px 12px;
+}
+
+.row {
+  padding-top: 20px;
+}
+
+#login-button {
+  background-image: url('../img/login-button.png');
+  background-position: 0px 0px;
+  display: inline-block;
+  width: 202px;
+  height: 46px;
+}
+
+#login-button:hover {
+  background-position: 0px 46px;
+  cursor: pointer;
+}
